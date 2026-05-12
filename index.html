@@ -149,6 +149,16 @@
   .hero-cta-arrow { transition: transform 0.2s; }
   .hero-cta:hover .hero-cta-arrow { transform: translateX(4px); }
   .hero-cta-meta { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-soft); }
+  .pay-later-pill {
+    display: inline-block;
+    background: var(--purple);
+    color: var(--paper);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    margin-left: 4px;
+    letter-spacing: 0.02em;
+  }
 
   .floating-shape { position: absolute; pointer-events: none; z-index: 1; }
   .shape-1 {
@@ -300,6 +310,27 @@
   .sessions-title em { font-style: italic; font-weight: 500; color: var(--purple); }
   .sessions-subtitle { font-size: 18px; color: var(--ink-soft); max-width: 500px; margin: 1rem auto 0; }
   .sessions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+
+  /* Register now pay later banner */
+  .pay-later-banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, var(--purple-soft) 0%, var(--cyan-soft) 100%);
+    border: 1px solid rgba(107, 70, 255, 0.18);
+    border-radius: 999px;
+    margin-bottom: 1.75rem;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--ink-soft);
+  }
+  .pay-later-icon {
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .pay-later-text strong { color: var(--ink); font-weight: 700; }
   .session-card { background: var(--paper); padding: 2.5rem; border-radius: 28px; border: 1px solid var(--grid); position: relative; transition: all 0.3s; }
   .session-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(11, 14, 42, 0.08); }
   .session-card.featured { background: var(--ink); color: var(--paper); border: none; }
@@ -670,6 +701,8 @@
     .tier-row { grid-template-columns: 1fr; gap: 1rem; padding: 2rem 0; }
     .tier-num { display: none; }
     .sessions-grid { grid-template-columns: 1fr; }
+    .pay-later-banner { padding: 0.85rem 1.25rem; font-size: 13px; border-radius: 18px; gap: 10px; }
+    .pay-later-icon { font-size: 18px; }
     .why-section, .week-section, .tiers-section, .sessions-section, .faq-section, .final-cta { padding: 5rem 1.5rem; }
     .ticker-item { font-size: 22px; }
     .group-discount { padding: 1.75rem 1.5rem; margin-top: 2.5rem; border-radius: 20px; }
@@ -735,7 +768,7 @@
             <span class="hero-cta-arrow">→</span>
           </a>
         </div>
-        <div class="hero-cta-meta">From $347 · 15 spots per session</div>
+        <div class="hero-cta-meta">From $347 · <span class="pay-later-pill">Register now, pay later</span></div>
       </div>
     </div>
 
@@ -968,6 +1001,11 @@
         <h2 class="section-aside-title">Two sessions. <em>Fifteen spots each.</em></h2>
       </div>
       <div class="sessions-content">
+
+        <div class="pay-later-banner">
+          <span class="pay-later-icon">⚡</span>
+          <span class="pay-later-text"><strong>Register now, pay later.</strong> Lock in your spot today — we'll handle billing closer to camp.</span>
+        </div>
 
         <div class="sessions-grid">
           <div class="session-card featured">
